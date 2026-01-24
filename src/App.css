@@ -1,3 +1,111 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* Espacio para el navbar fijo */
 main {
   padding-top: 80px;
+}
+
+/* Grilla de productos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Card de producto */
+.card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← centra todo horizontalmente */
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen del producto */
+.card img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Título y precio */
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+/* Botón y links */
+button, a {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover, a:hover {
+  background-color: #666;
+}
+
+/* Contador */
+.count {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.count button {
+  padding: 0.3rem 0.8rem;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.detail-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

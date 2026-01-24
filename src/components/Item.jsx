@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 
-function Item({ producto }) {
+export default function Item({ producto }) {
+  const { id, title, price, thumbnail } = producto
   return (
-    <div style={{ margin: '1rem', border: '1px solid #ccc', padding: '1rem' }}>
-      <h3>{producto.nombre}</h3>
-      <Link to={`/item/${producto.id}`}>Ver detalle</Link>
-    </div>
+    <article className="card">
+      <img src={thumbnail} alt={title} />
+      <h3>{title}</h3>
+      <p>${price}</p>
+      <Link to={`/item/${id}`}>Ver detalle</Link>
+    </article>
   )
 }
-
-export default Item

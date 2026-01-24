@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 70px; /* ← altura fija */
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -12,6 +13,7 @@
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 
 .navbar h1 {
   margin: 0;

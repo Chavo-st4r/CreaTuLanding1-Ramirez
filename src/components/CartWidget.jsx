@@ -1,7 +1,11 @@
-function CartWidget() {
+import { Link } from 'react-router-dom'
+import { useCart } from '../components/CartContext'
+
+export default function CartWidget() {
+  const { totalUnits } = useCart()
   return (
-    <span className="cart-icon">🛒</span>
+    <Link to="/cart" className="cart-widget">
+      🛒 <span>{totalUnits}</span>
+    </Link>
   )
 }
-
-export default CartWidget
